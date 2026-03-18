@@ -6,12 +6,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBH-iu0YUyPyuarkukR_wYpjw09yHqmNII",
-  authDomain: "shopex-547e6.firebaseapp.com",
-  projectId: "shopex-547e6",
-  storageBucket: "shopex-547e6.firebasestorage.app",
-  messagingSenderId: "657566617557",
-  appId: "1:657566617557:web:09e359fb036ce7b9edb75c"
+ apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+
 };
 
 const app = initializeApp(firebaseConfig);
@@ -20,3 +21,5 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 export default app;
 
+
+ 
