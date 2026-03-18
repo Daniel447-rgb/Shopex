@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-cream text-ink-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink-900 text-cream px-6 py-3 font-body font-medium text-sm tracking-wide hover:bg-ember-500 transition-all duration-200 active:scale-95 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border border-ink-900 text-ink-900 px-6 py-3 font-body font-medium text-sm tracking-wide hover:bg-ink-900 hover:text-cream transition-all duration-200 active:scale-95 cursor-pointer;
+  }
+
+  .input-field {
+    @apply w-full border border-ink-200 bg-white px-4 py-3 text-ink-900 font-body text-sm placeholder-ink-300 focus:outline-none focus:border-ink-600;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f5f5f0; }
+::-webkit-scrollbar-thumb { background: #888878; }
+::-webkit-scrollbar-thumb:hover { background: #4a4a3e; }
